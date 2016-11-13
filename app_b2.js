@@ -47,42 +47,13 @@ app.controller('myCtrl', function($scope,$http) {
       });
     }
 
-
-    function changeRezeptName(name)
-    {
-      $http.jsonp($scope.serverIP + '/changeRezeptName?id='+$scope.lastRezeptId+
-                                                  '&name='+name+
-                                                  '&callback=JSON_CALLBACK').
-          success(function(data, status, headers, config) {
-            //  console.log(JSON.stringify(data) );
-          }).error(function(data, status, headers, config) {
-            console.log("error");
-      });
-    }
-
-    function schrittSenden(s)
-    {
-      $http.jsonp($scope.serverIP + 'neuerSchritt?rid='+$scope.lastRezeptId+
-                                                  '&zid='+s.zid+
-                                                  '&beschreibung='+s.desc+
-                                                  '&zeit='+s.zeit+
-                                                  '&index='+s.indexx+
-                                                  '&callback=JSON_CALLBACK').
-          success(function(data, status, headers, config) {
-            //  console.log(JSON.stringify(data) );
-          }).error(function(data, status, headers, config) {
-            console.log("error");
-      });
-    }
-
     $scope.rezeptAbsenden = function ()
     {
       for (var i = 0; i < $scope.schritte.length; i++) {
           schrittSenden($scope.schritte[i]);
       }
-      changeRezeptName($scope.rezeptName);
 
-      $scope.schritte =  [{"zid":'' , "desc":'', "indexx":0,"zeit":5}];
+      schritte =  [{"zid":'' , "desc":'', "indexx":0,"zeit":5}];;
       $scope.lastRezeptId = null;
     }
 
@@ -114,8 +85,6 @@ app.controller('myCtrl', function($scope,$http) {
           success(function(data, status, headers, config) {
             //  console.log(data.found);
               $scope.rezepte = [data];
-              $scope.rezeptDetails = [data];
-
           }).error(function(data, status, headers, config) {
             console.log("error");
       });
@@ -139,39 +108,11 @@ app.controller('myCtrl', function($scope,$http) {
           console.log("error");
     });
 
-    $scope.findGetParameter =  function  (parameterName) {
-    var result = null,
-        tmp = [];
-    location.search
-    .substr(1)
-        .split("&")
-        .forEach(function (item) {
-        tmp = item.split("=");
-        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-    });
-    return result;
-}
-
-$scope.DetailsView = new function ()
-{
-    var rid = $scope.findGetParameter("rid");
-    if (rid !== undefined)
-    {
-      $scope.getRezept(rid);
-    }
-}
-
-$scope.RandomCartInit = new function()
-{
-      var random = $scope.findGetParameter("random");
-      if (random !== undefined )
-        $scope.randomCart(random);
-}
-
     var init = function () {
-      // $scope.randomCart(5);
+       $scope.randomCart(5);
        $scope.getCart();
-     }
+
+    };
     // and fire it after definition
     init();
 });

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Foodperience</title>
-<link rel="canonical" href="/help.html">
+<link rel="canonical" href="/randomIngredient3.html">
 <link rel="alternate" type="application/atom+xml" title="Foodperience" href="/feed.xml" />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">
@@ -42,36 +42,31 @@
   <ul class="nav navbar-nav">
     <li><a href="index_home.html">Home</a></li>
     <li><a href="find.html">Rezept finden</a></li>
-    <li><a href="create.html">Rezept erstellen</a></li>
+    <li class="active"><a href="create.html">Rezept erstellen</a></li>
     <li><a href="show.html">Live Show</a></li>
     <li><a href="profil.html">Profil</a></li>
-    <li class="active"><a href="help.html">Hilfe</a></li>
+    <li><a href="help.html">Hilfe</a></li>
   </ul>
 </div>
 </div>
 </nav>
-<!-- <div class="content" ng-app="myApp" ng-controller="myCtrl">
 
-  <div ng-repeat="x in rezepte">
-
-    [[x.name]]
-    <div ng-repeat="x in rezepte">
-
-      <b>[[x.name]]</b>
-      <div>
-        Zutaten
-          <div ng-repeat="z in x.zutaten"> [[z]]</div>
-    </div>
-      <div>
-        Schritte
-        <div ng-repeat="z in x.getSchritte"> [[z.beschreibung]]</div>
-      </div>
-
-    </div>
-
+<div class="content randomIngredient">
+  <div class="ingredientAre">
+    <table>
+    <tr ng-repeat="z in cart">
+      <td><img src="[[serverIP]][[z.bild]]"  height="50px"/></td><td>[[z.name]]</td>
+    </tr>
+  </table>
   </div>
-
-  </div> -->
+  <div class="noAndYes">
+    <div class="no">
+      <a href="randomBag3.html"></a>
+    </div>
+    <div class="yes">
+      <a href="createRecipe.html"></a>
+    </div>
+  </div>
 
     </div>
 

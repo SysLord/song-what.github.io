@@ -149,6 +149,13 @@ p {
       float: left;
       width: 100%; } }
 
+.content.indexHome {
+  background: url("/assets/layout/home-dbd98e95daf78576a778cbde60b83ed8.svg") center center no-repeat;
+  height: 518px;
+  width: 100%;
+  margin-top: 50px;
+  background-size: 100% 100%; }
+
 .home_button_1,
 .home_button_2,
 .home_button_3 {
@@ -165,15 +172,6 @@ p {
     margin: 0 auto;
     padding-top: 30px; }
 
-.home_button_1 {
-  background: #87C1A4; }
-
-.home_button_2 {
-  background: #F0906C; }
-
-.home_button_3 {
-  background: #98B6C7; }
-
 .inputIngredientAdd {
   border: 1px solid #D1D1D1;
   width: 80%;
@@ -188,6 +186,10 @@ p {
   background: url("/assets/layout/plus-e0e8ead73b72ee6f144e32f1a69531c0.svg") center center no-repeat;
   background-size: 20px auto; }
 
+.buttonIngredientAdd.buttonDone {
+  background: url("/assets/layout/done-e156954e485a547af6e0bfa4d8a4494f.svg") center center no-repeat;
+  background-size: 20px auto; }
+
 .inputIngredientAdd,
 .buttonIngredientAdd {
   height: 40px;
@@ -199,7 +201,7 @@ p {
   height: 40px; }
 
 .findResult {
-  margin-top: 15px; }
+  margin-top: 60px; }
 
 .recipeDetail {
   width: 96%;
@@ -247,3 +249,163 @@ p {
         margin-top: -20px;
         font-family: 'Amatic SC', cursive;
         font-size: 18px; }
+
+.content.create {
+  height: 518px;
+  width: 100%;
+  margin-top: 50px;
+  background: url("/assets/create/create-bd78364a1a323b14d5af92cdba5bb313.svg") center center no-repeat;
+  background-size: 100% 100%; }
+
+.create1And2 {
+  display: block;
+  margin-top: 50px;
+  height: 310px;
+  width: 100%; }
+
+.create1, .create2 {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100%; }
+
+.create3 {
+  height: 208px; }
+
+.create1 a, .create2 a, .create3 a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.content .randomBag {
+  position: fixed;
+  height: 104px;
+  width: 320px;
+  top: 50px;
+  background: url("/assets/randomBag/randomBag_bg1-a21ed8e3b72d259bee03ff061811b281.svg") center center no-repeat;
+  background-size: 100% 100%;
+  z-index: 0; }
+
+a.randomBags {
+  margin-top: 230px;
+  display: block;
+  float: left;
+  width: 50px;
+  height: 20px;
+  text-align: center; }
+  a.randomBags img {
+    width: 10px; }
+  a.randomBags.mittel {
+    width: 220px;
+    margin-top: 150px; }
+    a.randomBags.mittel img {
+      width: 180px; }
+
+.bagStar {
+  position: fixed;
+  display: block;
+  z-index: 10000;
+  bottom: 0;
+  width: 100%;
+  height: 118px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+  font-size: 22px;
+  background: url("/assets/randomBag/randomBag_bg2-38e930f756c15ba99e3f77419d72ab0d.svg") bottom center; }
+
+.content.randomIngredient {
+  height: 518px;
+  width: 100%;
+  margin-top: 50px;
+  background: url("/assets/randomBag/challenge_accept-3f0c1cc9d86d31038bec5c25b37e5dc1.svg") center center no-repeat;
+  background-size: 100% 100%; }
+
+.ingredientAre {
+  display: block;
+  z-index: 10000;
+  padding-top: 100px;
+  padding: auto 40px;
+  max-height: 350px; }
+  .ingredientAre table {
+    margin-left: 40px; }
+    .ingredientAre table td {
+      padding-right: 10px; }
+
+.noAndYes {
+  width: 100%;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  text-align: center; }
+  .noAndYes .no, .noAndYes .yes {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 120px; }
+  .noAndYes a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.content.detail {
+  margin-top: 50px;
+  background-color: rgba(240, 144, 108, 0.2);
+  min-height: 518px; }
+  .content.detail table {
+    margin-left: 20px;
+    width: 85%; }
+    .content.detail table tr {
+      margin: 10px 0; }
+    .content.detail table tr td {
+      padding: 5px 5px;
+      width: 40%; }
+      .content.detail table tr td:first-child {
+        width: 20%; }
+      .content.detail table tr td.detailTotalTime {
+        width: 100%; }
+  .content.detail .noAndYes {
+    height: 80px; }
+    .content.detail .noAndYes .no, .content.detail .noAndYes .yes {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 80px; }
+    .content.detail .noAndYes a {
+      color: #595959; }
+
+.content.createRecipe {
+  width: 98%;
+  margin: 50px 1% 0; }
+  .content.createRecipe input, .content.createRecipe textarea {
+    border: 1px solid #D1D1D1;
+    padding: 0 15px; }
+  .content.createRecipe textarea.createText {
+    width: 100%; }
+
+.createSteps img {
+  margin: 15px 2px;
+  width: 50px; }
+
+.buttonAddStep, .buttonDone {
+  width: 50%; }
+
+.content.succes {
+  background: url("/assets/layout/feedback-2b3404c24278c351008848a99d91ed4f.svg") center center no-repeat;
+  height: 518px;
+  width: 100%;
+  margin-top: 50px;
+  background-size: 100% 100%; }
+
+.succes_back {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.content.profil {
+  background: url("/assets/layout/profil-0c765a2d989bd7a12bb109000a4644fd.svg") center center no-repeat;
+  height: 518px;
+  width: 100%;
+  margin-top: 50px;
+  background-size: 100% 100%; }

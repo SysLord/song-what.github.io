@@ -13,8 +13,8 @@
   <!-- <script src="data.js"></script> -->
   <script src="app.js"></script>
 
-<link rel="stylesheet" href="/assets/bootstrap-aea2e8eb4b0a29e352020d1a2b44d629.css">
-<link rel="stylesheet" href="/assets/styles-c20925a3d351267b04efdc9e4f639ace.css">
+<link rel="stylesheet" href="/assets/bootstrap-bbb7893c5827ab9b0a3fe3d48b5cfa26.css">
+<link rel="stylesheet" href="/assets/styles-e3997a8c8a3dfa3fcb4c38978fedd88a.css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,7 +24,7 @@
 <![endif]-->
 
   </head>
-  <body>
+  <body ng-app="myApp" ng-controller="myCtrl">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -56,11 +56,16 @@
 
 <div class="findStart">
 
-  <input type="text" name="name" class="inputIngredientAdd" placeholder="Was gibt es noch in Kührschrank?" value="">
-  <input type="button" name="name" class="buttonIngredientAdd" value="">
+  <input type="text" name="name" class="inputIngredientAdd" placeholder="Was gibt es noch in Kührschrank?" value="" ng-model="query">
+  <!-- <input type="button" name="name" class="buttonIngredientAdd" value=""> -->
+  <!-- <input type="button" name="name" class="buttonIngredientAdd" value=""> -->
+  <a class="buttonIngredientAdd" href="find2.html"></a>
+  <!-- <img src="" alt="" /> -->
+  <img src="/assets/filter/filter1-7d1eea5b5c2fa08faa0059f1fef6d10a.svg" alt="" class="close" />
+
 </div>
 
-<div class="findResult" ng-app="myApp" ng-controller="myCtrl">
+<div class="findResult" >
   <div class="recipeDetail" ng-repeat="x in rezepte">
     <ul>
       <li>
@@ -73,77 +78,12 @@
         [[x.totalTime]]
       </li>
       <li>
-        <a href="detail.html">Detail</a>
+          <a href="detail.html?rid=[[x.id]]">Detail</a>
       </li>
     </ul>
   </div>
-  <div class="recipeDetail">
-    <ul>
-      <li>
-        Recipe Name
-      </li>
-      <li class="recipeIngredients">
-        Rezept Zutaten
-      </li>
-      <li class="recipeIngredients">
-        Rezept Zutaten
-      </li>
-      <li class="recipeTime">
-        20
-      </li>
-      <li>
-        <a href="#">Details</a>
-      </li>
-    </ul>
-  </div>
-  <!-- <div class="recipeDetail">
-    <ul>
-      <li>
-        Recipe Name
-      </li>
-      <li>
-        Rezept Zutaten
-      </li>
-      <li>
-        Rezept Zeit
-      </li>
-      <li>
-        <a href="#"></a>
-      </li>
-    </ul>
-  </div>
-  <div class="recipeDetail">
-    <ul>
-      <li>
-        Recipe Name
-      </li>
-      <li>
-        Rezept Zutaten, Rezept Zutaten, Rezept Zutaten
-      </li>
-      <li>
-        Rezept Zeit
-      </li>
-      <li>
-        <a href="#"></a>
-      </li>
-    </ul>
-  </div>
-  <div class="recipeDetail">
-    <ul>
-      <li>
-        Recipe Name
-      </li>
-      <li>
-        Rezept Zutaten, Rezept Zutaten, Rezept Zutaten
-      </li>
-      <li>
-        Rezept Zeit
-      </li>
-      <li>
-        <a href="#"></a>
-      </li>
-    </ul>
-  </div> -->
+
+
 </div>
 
     </div>
