@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Foodperience</title>
-<link rel="canonical" href="/help.html">
+<link rel="canonical" href="/detail.html">
 <link rel="alternate" type="application/atom+xml" title="Foodperience" href="/feed.xml" />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">
@@ -50,28 +50,32 @@
 </div>
 </div>
 </nav>
-<!-- <div class="content" ng-app="myApp" ng-controller="myCtrl">
+<div class="content detail">
+  <table >
+    <tr><th colspan="3">
+      <h1>[[rezeptDetails[0].name]]</h1> <br>
+    [[rezeptDetails[0].beschreibung]]   </th></tr>
+      <tr ng-repeat="s in rezeptDetails[0].schritte">
+        <td ><img src="[[serverIP]][[s.zutat.bild]]"  height="35px"/><br>
+        [[s.zutat.name]] </td>
+        <td>  [[s.beschreibung]] </td>
+        <td>ca. [[s.zeit]]min</td>
+    </tr>
+    <tr>
+      <td class="detailTotalTime">
+        Gesamte Zeit: [[rezeptDetails[0].totalTime]]
+      </td>
+    </tr>
+  </table>
 
-  <div ng-repeat="x in rezepte">
-
-    [[x.name]]
-    <div ng-repeat="x in rezepte">
-
-      <b>[[x.name]]</b>
-      <div>
-        Zutaten
-          <div ng-repeat="z in x.zutaten"> [[z]]</div>
+  <div class="noAndYes detail">
+    <div class="no">
+      <a href="find.html">Zurück</a>
     </div>
-      <div>
-        Schritte
-        <div ng-repeat="z in x.getSchritte"> [[z.beschreibung]]</div>
-      </div>
-
+    <div class="yes">
+      <a href="#">Like it</a>
     </div>
-
   </div>
-
-  </div> -->
 
     </div>
 

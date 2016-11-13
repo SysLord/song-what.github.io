@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Foodperience</title>
-<link rel="canonical" href="/help.html">
+<link rel="canonical" href="/createRecipe.html">
 <link rel="alternate" type="application/atom+xml" title="Foodperience" href="/feed.xml" />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">
@@ -50,28 +50,29 @@
 </div>
 </div>
 </nav>
-<!-- <div class="content" ng-app="myApp" ng-controller="myCtrl">
+<div class="content createRecipe">
+  <h1>Erstellen dein Rezept</h1>
 
-  <div ng-repeat="x in rezepte">
+  <!-- <input type="text"  placeholder="Wie heißt deine Rezept?"/>
+  <input type="button" width="100" height="25" /> -->
+  <input type="text" name="name" class="inputIngredientAdd" ng-model="rezeptName" placeholder="Wie heißt dein Rezept?" value="" ng-model="query">
+  <input type="button" name="name" class="buttonIngredientAdd" ng-click="newRezept()" value="">
 
-    [[x.name]]
-    <div ng-repeat="x in rezepte">
+  <div class="createSteps" ng-show="lastRezeptId" ng-repeat="s in schritte">
 
-      <b>[[x.name]]</b>
-      <div>
-        Zutaten
-          <div ng-repeat="z in x.zutaten"> [[z]]</div>
-    </div>
-      <div>
-        Schritte
-        <div ng-repeat="z in x.getSchritte"> [[z.beschreibung]]</div>
-      </div>
-
-    </div>
+    <img ng-repeat="z in cart" src="[[serverIP]][[z.bild]]" ng-click="s.zid = z.id; s.zName = z.name" height="40"><br>
+    Ausgewählte Zutat: [[s.zName]]<br>
+    Beschreibung: <br>
+    <textarea class="createText" cols="" rows="5" ng-model="s.desc">
+    </textarea><br>
+    Geschätzte Dauer: ca. <input type="number" ng-model="s.zeit" style="width: 3em"> min <br>
 
   </div>
+  <hr>
+  <input type="button" name="name" class="buttonIngredientAdd buttonAddStep" ng-show="lastRezeptId"  ng-click="hinzufuegen()" value=""/>
 
-  </div> -->
+  <a type="" name="name" class="buttonIngredientAdd buttonDone" ng-show="lastRezeptId" ng-click="rezeptAbsenden()"  href="succes.html" value=""/>
+    <!-- <img width="100" height="25"ng-show="lastRezeptId" ng-click="rezeptAbsenden()">Rezept ist Fertig (absenden)<br> -->
 
     </div>
 

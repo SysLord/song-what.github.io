@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Foodperience</title>
-<link rel="canonical" href="/help.html">
+<link rel="canonical" href="/randomBag.html">
 <link rel="alternate" type="application/atom+xml" title="Foodperience" href="/feed.xml" />
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">
@@ -42,36 +42,30 @@
   <ul class="nav navbar-nav">
     <li><a href="index_home.html">Home</a></li>
     <li><a href="find.html">Rezept finden</a></li>
-    <li><a href="create.html">Rezept erstellen</a></li>
+    <li class="active"><a href="create.html">Rezept erstellen</a></li>
     <li><a href="show.html">Live Show</a></li>
     <li><a href="profil.html">Profil</a></li>
-    <li class="active"><a href="help.html">Hilfe</a></li>
+    <li><a href="help.html">Hilfe</a></li>
   </ul>
 </div>
 </div>
 </nav>
-<!-- <div class="content" ng-app="myApp" ng-controller="myCtrl">
 
-  <div ng-repeat="x in rezepte">
-
-    [[x.name]]
-    <div ng-repeat="x in rezepte">
-
-      <b>[[x.name]]</b>
-      <div>
-        Zutaten
-          <div ng-repeat="z in x.zutaten"> [[z]]</div>
-    </div>
-      <div>
-        Schritte
-        <div ng-repeat="z in x.getSchritte"> [[z.beschreibung]]</div>
-      </div>
-
-    </div>
-
+<div class="content">
+  <div class="randomBag">
   </div>
-
-  </div> -->
+  <a ng-click="randomCart(7)" class="randomBags left" href="randomBag1.html?random=3">
+    <img src="/assets/layout/arrow-left-619385d261d8118ee59b851b2c072a60.svg" alt="" />
+  </a>
+  <a class="randomBags mittel"  href="randomIngredient.html">
+    <img src="/assets/randomBag/expert_bag-51de8b8f4f326fe06df8029d4f548443.svg" alt="" />
+  </a>
+  <a ng-click="randomCart(7)" class="randomBags right" href="randomBag3.html?=random=5">
+    <img src="/assets/layout/arrow-right-a6dbe1fa641b2bb9bb0bdd632167e841.svg" alt="" />
+  </a>
+  <div class="bagStar">
+    [[cartScore]]
+  </div>
 
     </div>
 
